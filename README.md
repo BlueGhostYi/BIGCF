@@ -29,3 +29,20 @@ We adopt three widely used large-scale recommendation datasets: Gowalla, Amazon-
 - Tmall:
 
   `python main.py --dataset tmall --epoch 150 --ssl_reg 0.2`
+
+## Citation
+If you find this work is helpful to your research, please consider citing our paper:
+```
+@article{zhang2024exploring,
+  title={Exploring the Individuality and Collectivity of Intents behind Interactions for Graph Collaborative Filtering},
+  author={Zhang, Yi and Sang, Lei and Zhang, Yiwen},
+  journal={arXiv preprint arXiv:2405.09042},
+  year={2024}
+}
+```
+
+## Acknowledgement
+To maintain fair comparisons and consistency, our codes are mainly adapted from the following repo: 
+>[https://github.com/HKUDS/DCCF]
+
+Many thanks to them for providing the training framework and for the active contribution to the open source community.
