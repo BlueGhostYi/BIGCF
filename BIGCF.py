@@ -82,13 +82,14 @@ class BIGCF(nn.Module):
         all_embeddings = torch.stack(all_embeddings, dim=1)
         all_embeddings = torch.sum(all_embeddings, dim=1, keepdim=False)
 
-        # Intent-aware Information Aggregation
+        # Bilateral Intent-guided
         u_embeddings, i_embeddings = torch.split(all_embeddings, [self.n_users, self.n_items], 0)
         u_int_embeddings = torch.softmax(u_embeddings @ self.user_intent, dim=1) @ self.user_intent.T
         i_int_embeddings = torch.softmax(i_embeddings @ self.item_intent, dim=1) @ self.item_intent.T
 
         int_embeddings = torch.concat([u_int_embeddings, i_int_embeddings], dim=0)
 
+        # reparameterization
         noise = torch.randn_like(all_embeddings)
         all_embeddings = all_embeddings + int_embeddings * noise
 
