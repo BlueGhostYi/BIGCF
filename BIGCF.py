@@ -130,7 +130,7 @@ class BIGCF(nn.Module):
 
         gnn_embeddings, int_embeddings = self.inference()
 
-        # bpr
+        # ELBO reconstruction loss
         u_embeddings = self.ua_embedding[users]
         pos_embeddings = self.ia_embedding[pos_items]
         neg_embeddings = self.ia_embedding[neg_items]
@@ -145,11 +145,11 @@ class BIGCF(nn.Module):
         emb_loss = (u_embeddings_pre.norm(2).pow(2) + pos_embeddings_pre.norm(2).pow(2) + neg_embeddings_pre.norm(2).pow(2))
         emb_loss = self.emb_reg * emb_loss
 
-        # intent prototypes
+        # collective intents
         cen_loss = (self.user_intent.norm(2).pow(2) + self.item_intent.norm(2).pow(2))
         cen_loss = self.cen_reg * cen_loss
 
-        # self-supervise learning
+        # graph contrastive regularization
         cl_loss = self.ssl_reg * self.cal_ssl_loss(users, pos_items, gnn_embeddings, int_embeddings)
 
         return mf_loss, emb_loss, cen_loss, cl_loss
