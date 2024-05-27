@@ -25,10 +25,10 @@ We adopt three widely used large-scale recommendation datasets: Gowalla, Amazon-
   `python main.py --dataset gowalla --epoch 150 --ssl_reg 0.4`
 - Amazon-Book:
 
-  `python main.py --dataset amazon --epoch 150 --ssl_reg 0.4`
+  `python main.py --dataset amazon --epoch 200 --ssl_reg 0.4`
 - Tmall:
 
-  `python main.py --dataset tmall --epoch 150 --ssl_reg 0.2`
+  `python main.py --dataset tmall --epoch 200 --ssl_reg 0.2`
 
 The log folder provides training logs for reference. The results of a single experiment may differ slightly from those given in the paper because they were run several times and averaged in the experiment.
 
