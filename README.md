@@ -33,7 +33,7 @@ We adopt three widely used large-scale recommendation datasets: Gowalla, Amazon-
 The log folder provides training logs for reference. The results of a single experiment may differ slightly from those given in the paper because they were run several times and averaged in the experiment.
 
 ## Different Frameworks
-Note that the experiments in the paper on BIGCF take the same training framework as previous work (DCCF). In the meantime, we also provide the code for BIGCF in the same training framework as the traditional classical work (e.g., LightGCN), see:
+Note that the experiments in the paper on BIGCF take the same training framework as previous work (DCCF). In the meantime, we also provide the code for BIGCF in the same training framework as the traditional classical work (e.g., LightGCN), see: >[https://github.com/BlueGhostYi/BIGCF-full-sample]
 
 
 ## Citation
