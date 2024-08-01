@@ -39,10 +39,11 @@ Note that the experiments in the paper on BIGCF take the same training framework
 ## Citation
 If you find this work is helpful to your research, please consider citing our paper:
 ```
-@article{zhang2024exploring,
+@inproceedings{zhang2024exploring,
   title={Exploring the Individuality and Collectivity of Intents behind Interactions for Graph Collaborative Filtering},
   author={Zhang, Yi and Sang, Lei and Zhang, Yiwen},
-  journal={arXiv preprint arXiv:2405.09042},
+  booktitle={Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages={1253--1262},
   year={2024}
 }
 ```
